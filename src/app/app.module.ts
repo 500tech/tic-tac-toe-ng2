@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { BoardComponent } from './components/board/board.component';
+import { CellComponent } from './components/cell/cell.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoardComponent,
+    CellComponent
   ],
   imports: [
     BrowserModule,
