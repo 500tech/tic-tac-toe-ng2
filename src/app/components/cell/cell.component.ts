@@ -12,7 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   `,
   styles: [
     `.cell-content { text-align: center; cursor: pointer }`,
-    `.hover-value:hover { opacity: 0.3 }`,
+    `.cell-content:hover .hover-value { opacity: 0.3 }`,
     `.hover-value { opacity: 0 }`
   ]
 })
