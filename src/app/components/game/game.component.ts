@@ -6,6 +6,7 @@ import { GameService } from 'app/services/game.service';
   template: `
     <ttt-controls></ttt-controls>
     <ttt-board></ttt-board>
+    <ttt-score></ttt-score>
   `,
   styles: [],
   providers: [GameService]

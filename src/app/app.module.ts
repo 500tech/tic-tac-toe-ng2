@@ -8,6 +8,7 @@ import { CellComponent } from './components/cell/cell.component';
 
 import { ControlsComponent } from './components/controls/controls.component';
 import { GameComponent } from './components/game/game.component';
+import { ScoreComponent } from './components/score/score.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GameComponent } from './components/game/game.component';
     BoardComponent,
     CellComponent,
     ControlsComponent,
-    GameComponent
+    GameComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ export class GameService {
   winner:string;
   tie:boolean;
   moves:number;
+  score = {X:0, O:0};
 
   get ended():boolean {
     return this.winner || this.tie;
@@ -23,7 +24,12 @@ export class GameService {
     this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
     this.moves++;
     this.winner = this._getWinner();
-    if (!this.winner) this.tie = this.moves === 9;
+    if (this.winner) {
+      this.score[this.winner]++;
+    }
+    else {
+      this.tie = this.moves === 9;
+    }
   }
 
   resetGame() {
