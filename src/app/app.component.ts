@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ttt-root',
   template: `
-  <h1>
-    {{title}}
-  </h1>
+    <ttt-controls></ttt-controls>
+    <ttt-board></ttt-board>
+    <ttt-score></ttt-score>
   `,
   styleUrls: ['./app.component.scss']
 })
