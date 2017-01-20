@@ -6,11 +6,16 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import { CellComponent } from './components/cell/cell.component';
 
+import { ControlsComponent } from './components/controls/controls.component';
+import { GameComponent } from './components/game/game.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    CellComponent
+    CellComponent,
+    ControlsComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ttt-root',
   template: `
-    <ttt-board></ttt-board>
+    <ttt-game></ttt-game>
   `,
   styles: [
   ]
