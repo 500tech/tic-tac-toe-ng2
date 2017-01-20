@@ -3,10 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ttt-root',
   template: `
-    App Works!
+    <h1>{{ title }}</h1>
   `,
-  styleUrls: ['./app.component.scss']
+  styles: [
+    `h1 {color: blue}`
+  ]
 })
 export class AppComponent {
-  title = 'ttt works!';
+  title:string = 'Tic Tac Toe!';
+
 }
