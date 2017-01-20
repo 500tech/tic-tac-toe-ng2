@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <table>
       <tr *ngFor="let row of board; let i = index">
         <td *ngFor="let cell of row; let j = index">
-          <ttt-cell [value]="cell" (select)="playCell(i,j)"></ttt-cell>
+          <ttt-cell [value]="cell" [nextValue]="currentPlayer" (select)="playCell(i,j)"></ttt-cell>
         </td>
       </tr>
     </table>
