@@ -10,7 +10,7 @@ export class GameService {
   score = {X:0, O:0};
 
   get ended():boolean {
-    return this.winner || this.tie;
+    return !!this.winner || this.tie;
   }
 
   constructor() {
@@ -50,17 +50,17 @@ export class GameService {
     if (this._columnHasWinner(2)) return this.board[0][2];
 
     // check diagonals
-    if (this.board[0][0] === this.board[1][1] && this.board[1][1] === this.board[2][2]) return this.board[0][0];
-    if (this.board[0][2] === this.board[1][1] && this.board[1][1] === this.board[2][0]) return this.board[0][2];
+    if (this.board[0][0] && this.board[0][0] === this.board[1][1] && this.board[1][1] === this.board[2][2]) return this.board[0][0];
+    if (this.board[0][2] && this.board[0][2] === this.board[1][1] && this.board[1][1] === this.board[2][0]) return this.board[0][2];
 
     return null;
   }
 
   private _rowHasWinner(index) {
-    return (this.board[index][0] === this.board[index][1] && this.board[index][1] === this.board[index][2]);
+    return (this.board[index][0] && this.board[index][0] === this.board[index][1] && this.board[index][1] === this.board[index][2]);
   }
 
   private _columnHasWinner(index) {
-    return (this.board[0][index] === this.board[1][index] && this.board[1][index] === this.board[2][index]);
+    return (this.board[0][index] && this.board[0][index] === this.board[1][index] && this.board[1][index] === this.board[2][index]);
   }
 }
